@@ -9,9 +9,6 @@
   "bin": {
     "ssler": "./run.sh"
   },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "shelljs": "^0.7.8"
-  }
+  "author": "Selesti Ltd",
+  "license": "private",
 }
