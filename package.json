@@ -1,0 +1,17 @@
+{
+  "name": "ssl-errrrr",
+  "version": "0.0.1",
+  "description": "Selesti tool to quickly add new SSL sites",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "ssler": "./index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "shelljs": "^0.7.8"
+  }
+}
