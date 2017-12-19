@@ -43,6 +43,8 @@ const SSLer = function (domain) {
 
             fs.writeFile(this.config, config, err => {
                 console.log(`SSL-ER :: OpenSSL config updated`)
+                console.log(`SSL-ER :: Signing new certificates`)
+                console.log('')
             })
         })
     }
@@ -52,7 +54,8 @@ const SSLer = function (domain) {
 
 // Make sure we have a URL param.
 if (typeof process.argv[2] == 'undefined') {
-    return console.error('Please provide a URL to protect')
+    console.error('Please provide a URL to continue')
+    return process.exit(1)
 }
 
 // Make sure its a valid url
@@ -61,7 +64,8 @@ const parsedUrl = url.parse(
 )
 
 if (!parsedUrl.hostname) {
-    return console.error('Please enter a valid URL')
+    console.error('Please enter a valid URL')
+    return process.exit(1)
 }
 
 new SSLer(parsedUrl.hostname)
