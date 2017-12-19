@@ -1,6 +1,6 @@
 {
   "name": "ssl-errrrr",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Selesti tool to quickly add new SSL sites",
   "main": "index.js",
   "scripts": {
