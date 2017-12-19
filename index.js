@@ -25,7 +25,8 @@ const SSLer = function (domain) {
         rl
         .on('line', line => {
             if (line.indexOf('DNS.') > -1) {
-                this.lastDnsEntry = line.match(/(?<=DNS\.)([0-9]+)/g)[0];
+                let matches = line.match(/DNS\.([0-9]+)/g)[0];
+                this.lastDnsEntry = matches.substring(4);
             }
 
             if (line.indexOf('IP.1 =') === 0) {
